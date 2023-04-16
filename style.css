@@ -1,0 +1,914 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+/* General Page Settings : */
+
+/* universal selector  */
+/* setting the margin and padding to zero  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+/* Overall color of the page  */
+
+body{
+  background: #5e5858;
+  box-sizing: border-box;
+  /* text-align: center; */
+}
+
+
+h2{
+  color: white;
+  font-size: 40px;
+}
+
+
+
+
+/*----------------- nav bar and logo ------------------: */
+
+/* The container where we gonna put our main section  */
+
+.display{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+/* ------------video settings---------------  */
+
+.back-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* video resizing  */
+
+
+/* @media (max-aspect-ratio: 16/9){
+  .back-video{
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9){
+  .back-video{
+      width: auto;
+      height: 100%;
+  }
+} */
+  
+/* navbar settings  */
+
+nav{
+    height: 70px;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #faffff2a;
+    backdrop-filter: blur(6px);
+    margin-bottom: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+
+nav .logo{
+    width: 80px;
+}
+
+
+ul li a:hover {
+  color: goldenrod;
+}
+
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    /* margin-left: 10px; */
+    padding-left: 60px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-family: 'Alata', sans-serif;
+}
+
+  
+  nav ul{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  transition: all 0.2s ease-in-out;
+  color: goldenrod;
+  margin-left: 50px;
+  padding-left: 150px;
+  display: flex;
+  align-items: center;
+  }
+
+
+  .nav-icons {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  }
+
+  .ri-heart-fill,
+  .ri-user-3-fill{
+    color: rgb(0, 0, 0);
+    margin-left: 30px;
+  }
+
+ 
+  
+  .ri-heart-fill:hover,
+  .ri-user-3-fill:hover {
+  /* background-color: #333; */
+  color: goldenrod;
+  }
+
+.icon-link{
+  text-decoration: none;
+}
+
+
+
+  /* ------------------Main Page settings -----------------*/
+
+
+.content{
+    text-align: center;
+}
+
+
+.content h1{
+    font-size: 100px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+/* Hover for the main text  */
+
+.content h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+
+/* --------------search bar in the main section------------------  */
+
+/* height of the input in search bar  */
+
+.search-bar ,
+.button input place{
+  height: 50px;
+}
+
+/* search bar settings  */
+
+.search-bar{
+  width: 40%;
+  background: rgba(255, 255, 255, 0.2);
+  margin-left: 350px;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input{
+  background-color: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  /* padding: 20px; */
+  font-size: 20px;
+  color: #cac7ff;
+}
+
+
+/* placeholder color  */
+
+input.search-input::placeholder {
+  color: #fff;
+}
+
+/* search bar icon  */
+
+.search-bar button img{
+  width:20px
+}
+
+/* search bar button under icon  */
+
+.search-bar button {
+  border: 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: goldenrod;
+  cursor: pointer;
+}
+
+
+
+
+/* -----------------Make an enquiry button-----------------  */
+
+.upper-tag{
+  color: white;
+}
+
+.button {
+  position: relative;
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 2px solid hsl(0, 0%, 100%);
+  padding: 10px 20px;
+  z-index: 1;
+  text-decoration: none;
+}
+
+/* the background will be transparant by default 
+and keeping the white stroke in the side  */
+
+
+.button:is(:hover, :focus) {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 100%);
+}
+
+/* the goldenrod color will fill the background after */
+/* pointing the cursor  */
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: goldenrod;
+  opacity: 80%;
+  transition: 0.25s ease;
+  z-index: -1;
+}
+
+/* set width to 100% to fill the button */
+
+.button:is(:hover, :focus)::before { 
+  width: 100%; 
+}
+
+
+
+/* ===================Setting the setting of the heading of the sections===============  */
+
+.heading{
+  text-align: center;
+  padding-bottom: 2.5rem;
+  font-size: 3rem;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+
+/* =================================================================================== */
+/* =================================================================================== */
+
+/* -----------------------------services section --------------------------------- */
+
+/* spliting this section into small containers  */
+
+.box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* sitting the small boxes settings */
+
+.services .box-container .box{
+  background-color: #fff;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+
+/* images inside the boxes  */
+
+.services .box-container .box img{
+  margin: 1rem 0;
+  height: 8rem;
+  
+}
+
+/* h3 inside the small containers  */
+
+.services .box-container .box h3{
+  font-size: 25px;
+  padding: 1rem 0;
+  color: #000000;
+  text-transform: capitalize;
+}
+
+
+/* the paragraph within  */
+.services .box-container .box p{
+  line-height: 2;
+  font-size: 15px;
+  color: #666;
+  padding-top: .5rem;
+}
+
+
+
+
+
+/* =================================================================================== */
+/* =================================================================================== */
+
+/* -----------------------------Offers section --------------------------------- */
+
+/* usign flex box to divide the section to small containers  */
+
+.listings .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25rem);
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* setting the small containers settings  */
+
+.listings .box-container .box{
+  background-color: #fff;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  padding: 2rem;
+  overflow-x: hidden;
+  font-size: 1.7rem;
+  color: #303030;
+  padding-bottom: .3rem;
+}
+
+/* other setting  */
+
+.listings .box-container .box .thumb{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  height: 20rem;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+/* h3 element in the section  */
+
+.listings .box-container .box  h3{
+  height: 1.5rem;
+  line-height: 1rem;
+  color: #303030;
+  background-color: #eee;
+  text-align:center;
+}
+
+
+/* img inside the container  */
+
+.listings .box-container .box .thumb img{
+  height: 100%;
+  width: 100%;
+  transition: .2s linear;
+}
+
+/* zoom up effect on image  */
+
+.listings .box-container .box:hover .thumb img{
+  transform: scale(1.1);
+}
+
+/* number of images small tag */
+
+
+.listings .box-container .box .thumb .total-images{
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background-color: rgba(0,0,0,.3);
+  color: #fff;
+  padding: .5rem 1.5rem;
+  font-size: 1.6rem;
+  z-index: 1;
+}
+
+/* the icon  */
+
+.total-images i{
+  margin-right: .7rem;
+}
+
+.type{
+  position: absolute;
+  bottom: 1rem; left: .7rem;
+  z-index: 1;
+}
+
+.type span{
+  margin-right: .7rem;
+  padding: .5rem 1.5rem;
+  color: #fff;
+  background-color: goldenrod;
+  font-size: 1rem;
+}
+
+span{
+  font-size: 16px;
+}
+
+/* button settings  */
+/* heart icon  */
+
+.save{
+  position: absolute;
+  top: 1rem; right: 1rem;
+  z-index: 1;
+}
+
+.save button{
+  background-color: rgba(0,0,0,.3);
+  color: #fff;
+  padding: .7rem 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.save button:hover{
+  background-color: goldenrod;
+}
+
+/* name of the offer  */
+
+.listings .box-container .box .name{
+  font-size: 20px;
+  background-color: #fff;
+}
+
+/* location  */
+
+.listings .box-container .box .location{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 25px;
+  color: #666;
+}
+
+/* the icon of the location */
+
+.listings .box-container .box .location i{
+  margin-right: 1rem;
+  color: goldenrod;
+}
+
+
+/* general setting about the offer  */
+
+.listings .box-container .box .flex{
+  display: flex;
+  background-color: rgb(224, 224, 224);
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* the description for the settings  */
+
+.listings .box-container .box .flex p{
+  font-size: 1.6rem;
+  flex: 1 1 4rem;
+}
+
+.listings .box-container .box .flex p span{
+  color: #666;
+}
+
+/* the icon  */
+
+.listings .box-container .box .flex p i{
+  margin-right: 1rem;
+  color: goldenrod;
+}
+
+
+
+/* the button in the container  */
+.btn{
+   background-color: goldenrod;
+   margin-top: 50px;
+   margin-left: 100px;
+   margin-bottom: 20px;
+   padding: 5px 15px;
+   color: #eee;
+   cursor: pointer;
+   text-align: center;
+   font-size: 1rem;
+   text-transform: capitalize;
+   align-content: center;
+   text-decoration: none;
+}
+
+/* the hover */
+
+.btn:hover{
+  color: rgb(0, 0, 0);
+}
+
+/* other fixes for icons  */
+
+.fas fa-bed,
+.fas fa-bath,
+.fas fa-maximize{
+  height: 5px;
+}
+
+.details{
+  font-size: 12px;
+}
+
+p{
+  font-size: 13px;
+}
+
+
+
+/* =================================================================================== */
+/* =================================================================================== */
+
+
+
+/* --------------------Agents sections css style---------------------------  */
+
+
+
+/* the whole section settings  */
+
+.agents-section {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* setting containers settings  */
+
+.agent-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: var(--rating);
+  margin: 10px;
+  text-align: center;
+}
+
+/* container for agents  */
+
+.container2 {
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* image setting  */
+
+.agent-img {
+  width: 150px;
+  height: 150px;
+}
+
+/* making the image round  */
+
+.rounded-img {
+  border-radius: 50%;
+}
+
+
+
+/* setting the rating by importing a star png */
+.stars {
+height: 30px;
+background-image: url('./images/star.png');
+background-repeat: repeat-x;
+background-size: contain;
+margin-bottom: 10px;
+}
+
+[data-rating="1"] .stars {
+width: 30px;
+}
+
+[data-rating="2"] .stars {
+width: 60px;
+}
+
+[data-rating="3"] .stars {
+width: 90px;
+}
+
+[data-rating="4"] .stars {
+width: 120px;
+}
+
+[data-rating="5"] .stars {
+width: 150px;
+}
+
+/* agents details */
+
+.p-agents{
+font-size: 18px;
+font-weight: 300;
+}
+
+
+/* agents names settings  */
+
+.agent-prof{
+  color: black;
+  text-decoration: none;
+}
+
+.agent-prof:hover{
+  color: goldenrod;
+
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+
+
+/* --------------------Contacts sections css style---------------------------  */
+
+/* container  */
+
+.container{
+  width: 1200px;
+  height: 730px;
+  margin: 5% auto;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px #C8C7D9;
+  position: relative;
+}
+  
+/* button settings  */
+
+.btn-send{
+  width: 200px;
+  height: 60px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 15px;
+  margin: 2% 8%;
+  border: none;
+  background-color: goldenrod;
+}
+
+/* hover   */
+.btn-send:hover{
+  color: black;
+}
+
+
+.btn-send-text{
+  color: white;
+  text-decoration: none;
+}
+
+/* map settings  */
+
+.map{
+  width: 45%;
+  padding-bottom: 22px;
+  float: left;
+}
+
+.contact-form{
+  width: 53%;
+  margin-left: 2%;
+  float: left;
+}
+
+/* subtitle settings  */
+
+
+.subtitle{
+  padding-top: 20px;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0 4% 5% 8%;
+}
+
+
+/* input fields settings  */
+.contact-inputs,
+.contact-ta{
+    width: 520px;
+    border-radius: 10px;
+    padding: 3%;
+    margin: 2% 8%;
+    color: black;
+    border: 1px solid rgb(221, 214, 214);
+    margin-top: 10px;
+}
+
+.contact-inputs ,
+.contact-ta::placeholder {
+  background-color: rgb(233, 225, 225);
+}
+
+
+
+
+
+/* =================================================================================== */
+/* =================================================================================== */
+
+
+/* -----------------------------Footer section --------------------------------- */
+
+
+/* footer general settings  */
+
+.footer{
+  background-color: #000000;
+  height: 150px;
+}
+
+/* logo in footer  */
+
+.footer-logo{
+  margin-left: 60px;
+}
+
+/* the sections settings in the footer  */
+
+
+.nav-footer {
+  list-style: none;
+  display: flex;
+  color: white;
+  padding-top: 40px;
+  font-size: 15px;
+}
+
+
+.nav-footer li {
+  margin: 0 9px; 
+  justify-content: space-between;
+}
+
+/* the color  */
+
+.nav-footer a {
+  color: rgb(255, 255, 255);
+}
+
+
+.footer-upper,
+.footer-lower {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-item {
+  flex-basis: 30%;
+}
+
+.footer-text{
+  background-color: white;
+}
+
+
+/* social links */
+
+.social-link {
+  margin-right: 5px;
+  font-size: 20px;
+  padding-left: 40px;
+  text-decoration: none;
+}
+
+/* contact links  */
+
+.contact-link{
+  text-decoration: none;
+}
+.social-link i {
+  color: white; /* Sets the color of the icons to white */
+}
+.social-link:hover i {
+  color: goldenrod; /* Sets the color of the icons to goldenrod when hovered */
+}
+
+/* contact infos additional settings */
+
+.foo-lis{
+  text-decoration: none;
+  font-family: 'Alata', sans-serif;
+}
+
+
+
+/* contacts in footer  */
+
+
+.ri-map-pin-fill,
+.ri-phone-fill,
+.ri-mail-fill{
+  color: white;
+  text-decoration-line: none;
+}
+
+
+.contact-info{
+  color: white;
+}
+
+.contact-info:hover{
+  color: goldenrod;
+}
+
+
+.contact-list{
+  list-style: none;
+  padding-left: 140px;
+  margin-top: 30px;
+}
+
+
+
+/* under footer properties  */
+
+.footer-text {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.undfooter-cont {
+  text-align: center;
+}
+
+.und-foo-text {
+  margin: 0;
+}
+
+.und-foo-text,
+.link-foo {
+  font-size: 17px;
+}
+
+.link-foo {
+  color: rgb(192, 138, 0);
+  text-decoration: none;
+}
+
